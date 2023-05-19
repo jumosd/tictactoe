@@ -99,4 +99,13 @@ class Tic_Tac_Toe:
             # 게임판 보여주기
             self.show_board()
 
-#게임 시작
+            # 사용자 입력대기, 컴퓨터일 경우 랜덤 위치 반환
+            if player == "X" :
+                #randint메소드는 1~3까지 로 입력한다 
+                #0을 제와한이유는 사용자와 동일하게 하기위함이다
+                    while True:
+                        row = random.randint(1,3)
+                        col = random.randint(1,3)
+                        if self.board[row][col] =="*":
+                            break
+                    print("컴퓨터가 행"+str(row)+", 열"+str(col)+ "을/를 선택했습니다.")
