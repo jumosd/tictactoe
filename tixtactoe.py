@@ -29,7 +29,18 @@ class Tic_Tac_Toe:
         
     # 승리 상태 확인    
     def is_win(self, player):
-        pass
+        
+        n = len(self.board) # 2차원 보드의 갯수를 샘
+        
+        #행확인
+        for i in range(n):
+            win = True
+            for j in range(i):
+                if self.board[i][j] != player:
+                    win = False
+                    break
+            if win == True:
+                return win
     #잔여 빈칸 여부 확인
     def is_board_full(self):
         pass
