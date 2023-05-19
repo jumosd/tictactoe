@@ -82,9 +82,21 @@ class Tic_Tac_Toe:
             print()
     # 게임 시작
     def start(self):
-        pass
+        #게임판 만들기
+        self.create_board()
+        # 게임판 보여주기
+        self.show_board()
+       
+        #플레이어 만들기
+        player = self.select_first_player()
 
-
-# 게임 생성
+        while True:
+            # 플레이어 설정
+            if player == "X":
+                print("컴퓨터 차례입니다.")
+            else :
+                print("사용자 차례입니다.")
+            # 게임판 보여주기
+            self.show_board()
 
 #게임 시작
