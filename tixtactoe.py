@@ -70,7 +70,10 @@ class Tic_Tac_Toe:
         
     # 플레이어 변경
     def next_player(self, player):
-        pass
+        if player == 'O':
+            return 'X'
+        else :
+            return 'O'
     # 현재 게임판 상태 출력
     def show_board(self):
         pass
