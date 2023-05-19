@@ -76,7 +76,10 @@ class Tic_Tac_Toe:
             return 'O'
     # 현재 게임판 상태 출력
     def show_board(self):
-        pass
+        for row in self.board:
+            for item in row:
+                print(item, end =" ")
+            print()
     # 게임 시작
     def start(self):
         pass
