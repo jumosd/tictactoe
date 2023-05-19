@@ -41,6 +41,15 @@ class Tic_Tac_Toe:
                     break
             if win == True:
                 return win
+        #열확인
+        for i in range(n):
+            win = True
+            for j in range(n):
+                if self.board[j][i] != player:
+                    break
+            if win == True:
+                return win
+
     #잔여 빈칸 여부 확인
     def is_board_full(self):
         pass
