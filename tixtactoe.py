@@ -62,7 +62,12 @@ class Tic_Tac_Toe:
 
     #잔여 빈칸 여부 확인
     def is_board_full(self):
-        pass
+        for row in self.board:
+            for item in row:
+                if item == '*':
+                    return False
+        return True
+        
     # 플레이어 변경
     def next_player(self, player):
         pass
