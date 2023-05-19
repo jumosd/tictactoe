@@ -1,3 +1,6 @@
+import random
+
+
 class Tic_Tac_Toe:
  
     # 게임판 생성
@@ -11,13 +14,19 @@ class Tic_Tac_Toe:
             for j in range(3):
                 row.append('*')
             self.board.append(row)
+
         pass
     # 첫 플레이어 선택
     def select_first_player(self):
-        pass
+        if random.randint(0,1) == 0 :
+            return "X"
+        else:
+            return "O"
+        
     # 기호 표시
     def mark_spot(self, row, col, player):
-        pass
+        self.board[row][col] = player
+        
     # 승리 상태 확인    
     def is_win(self, player):
         pass
